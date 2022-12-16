@@ -1,0 +1,52 @@
+{
+    "raw_fastq_gz_dir": "../THERMO-ATAC-SEQ-HVCYFDRXY/",
+    "meta_file": "ThermoATACmetadata.txt",
+    "tool_version":
+    {
+        "fastx": "0.0.13",
+        "cutadapt": "4.0",
+        "samtools": "1.16.1",
+        "bowtie2": "2.4.5"
+    },
+    "file_names":
+    {
+        "mkdir_done": "mkdir.done",
+        "peaks_done": "peaks.done"
+    },
+    "dir_names":
+    {
+		"fastqc_dir": "outputs/fastqc",
+        "trimmed_dir": "outputs/trimmed",
+        "mapped_dir": "outputs/mapping",
+        "filtered_dir": "outputs/filtered",
+        "shifted_dir": "outputs/shifted",
+        "bigwigs_dir": "outputs/bigwigs",
+        "peak_calling_dir": "outputs/peaks"
+    },
+    "params":
+    {
+        "bowtie2":
+            {
+            "threads": "4",
+            "all": "-a",
+            "bowtie2_reference":"/projects/academic/gbcstaff/Core_Projects/ATAC-SEQ-PIPE/THERMO-CHO-GENOME/CHOK1GS.Rituximab/CHO"
+            },
+        "samtools":
+            {
+            "samtoolsview_ref":"/projects/academic/gbcstaff/Core_Projects/ATAC-SEQ-PIPE/THERMO_CHO_nomito.bed"
+            },
+        "deeptools":
+            {
+            "cores": "4",
+            "size": "2652783500"
+            },
+        "picard":
+            {
+            "picard_path": "/projects/academic/gbcstaff/utils/picard/picard-2.10.0/"
+            },
+        "macs2":
+            {
+            "genome": "hs"
+            }
+    }
+}
